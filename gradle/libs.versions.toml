@@ -1,0 +1,32 @@
+[versions]
+kotlin = "2.0.0"
+logback = "1.5.6"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+[libraries]
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.9.0" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.7.3" }
+postgresql = { module = "org.postgresql:postgresql", version = "42.7.4" }
+hikaricp = { module = "com.zaxxer:HikariCP", version = "6.0.0" }
+kotliquery = { module = "com.github.seratch:kotliquery", version = "1.9.0" }
+kotlin-logging = { module = "io.github.microutils:kotlin-logging-jvm", version = "3.0.5" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+logback-logstash = { module = "net.logstash.logback:logstash-logback-encoder", version = "8.0" }
+
+[bundles]
+deps = [
+    "kotlin-coroutines-core",
+    "kotlinx-serialization-json",
+    "postgresql",
+    "hikaricp",
+    "kotliquery",
+    "kotlin-logging",
+    "logback-core",
+    "logback-classic",
+    "logback-logstash",
+
+]

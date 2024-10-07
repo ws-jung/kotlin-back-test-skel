@@ -1,0 +1,14 @@
+services:
+  postgres:
+    container_name: stock-db
+    image: postgres:14
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    ports:
+      - "15432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=stock
+    restart: always
